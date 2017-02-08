@@ -1,0 +1,90 @@
+﻿<Window x:Class="MultipleLanguagesFromDatabase.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MultipleLanguagesFromDatabase"
+        mc:Ignorable="d"
+        Title="{Binding MainWindowTitle, FallbackValue='Hauptfenster'}"
+        Height="350"
+        Width="525">
+    <StackPanel>
+        <!--The menu-->
+        <Menu x:Name="mainmenu"
+              Grid.Row="0"
+              Grid.Column="0"
+              Margin="5">
+            <!--Menu 'Program'-->
+            <MenuItem x:Name="mi_program"
+                      Header="{Binding MenuitemProgram, FallbackValue='Programm'}">
+                <MenuItem x:Name="mi_languageselection"
+                          Header="{Binding MenuitemLanguageSelection, FallbackValue='Sprachwahl'}"
+                          Click="mi_languageselection_Click"/>
+                <MenuItem x:Name="mi_releaseversion"
+                          Header="{Binding MenuitemReleaseVersion, FallbackValue='Freigabe / Version'}"/>
+                <MenuItem x:Name="mi_textpflege"
+                          Header="{Binding MenuitemTextMaintenance, FallbackValue='Textpflege'}"/>
+                <Separator/>
+                <MenuItem x:Name="mi_quit"
+                          Header="{Binding MenuitemQuit, FallbackValue='Beenden'}"/>
+            </MenuItem>
+            <!--Menu 'Master data'-->
+            <!--<MenuItem x:Name="mi_masterdata"
+                      loc:TranslateExtension.Uid="menuMasterData"
+                      Header="{loc:Translate}">
+                <MenuItem x:Name="mi_componentkinds"
+                          loc:TranslateExtension.Uid="menuitemComponentKinds"
+                          Header="{loc:Translate}"
+                          Click="mi_componentkinds_Click"/>
+                <MenuItem x:Name="mi_componentgroups"
+                          loc:TranslateExtension.Uid="menuitemComponentGroups"
+                          Header="{loc:Translate}"
+                          Click="mi_componentgroups_Click"/>
+                <MenuItem x:Name="mi_systemtypes"
+                          loc:TranslateExtension.Uid="menuitemSystemTypes"
+                          Header="{loc:Translate}"
+                          Click="mi_systemtypes_Click"/>
+                <Separator/>
+                <MenuItem x:Name="mi_componenttypes"
+                          loc:TranslateExtension.Uid="menuitemComponentTypes"
+                          Header="{loc:Translate}"
+                          Click="mi_componenttypes_Click"/>
+                <Separator/>
+                <MenuItem x:Name="mi_typesoftest"
+                          loc:TranslateExtension.Uid="menuitemTypesOfTest"
+                          Header="{loc:Translate}"
+                          Click="mi_typesoftest_Click"/>
+                <MenuItem x:Name="mi_typeoftestcharacteristics"
+                          loc:TranslateExtension.Uid="menuitemTypeOfTestCharacteristics"
+                          Header="{loc:Translate}"
+                          Click="mi_typeoftestcharacteristics_Click"/>
+                <MenuItem x:Name="mi_inputmasks"
+                          loc:TranslateExtension.Uid="menuitemInputMasks"
+                          Header="{loc:Translate}"
+                          Click="mi_inputmasks_Click"/>
+                <Separator/>
+                <MenuItem x:Name="mi_dependencies"
+                          loc:TranslateExtension.Uid="menuitemDependencies"
+                          Header="{loc:Translate}"
+                          Click="mi_dependencies_Click"/>
+                <MenuItem x:Name="mi_nominalvalues"
+                          loc:TranslateExtension.Uid="menuitemNominalValues"
+                          Header="{loc:Translate}"
+                          Click="mi_nominalvalues_Click"/>
+                <MenuItem x:Name="mi_formulas"
+                          loc:TranslateExtension.Uid="menuitemFormulas"
+                          Header="{loc:Translate}"
+                          Click="mi_formulas_Click"/>
+                <MenuItem x:Name="mi_stepfunctions"
+                          loc:TranslateExtension.Uid="menuitemStepFunctions"
+                          Header="{loc:Translate}"
+                          Click="mi_stepfunctions_Click"/>
+                <Separator/>
+                <MenuItem x:Name="mi_documentation"
+                          loc:TranslateExtension.Uid="menuitemDocumentation"
+                          Header="{loc:Translate}"
+                          Click="mi_documentation_Click"/>
+            </MenuItem>-->
+        </Menu>
+    </StackPanel>
+</Window>

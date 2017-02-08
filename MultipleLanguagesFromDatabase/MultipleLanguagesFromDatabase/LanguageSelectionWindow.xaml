@@ -1,0 +1,29 @@
+﻿<Window x:Class="MultipleLanguagesFromDatabase.LanguageSelectionWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MultipleLanguagesFromDatabase"
+        mc:Ignorable="d"
+        Title="{Binding WindowTitle, FallbackValue='Sprachwahl'}"
+        Height="300"
+        Width="300">
+    <StackPanel>
+        <!--<Button x:Name="btn_german"
+                Margin="5"
+                Content="{Binding ChangeToGerman, FallbackValue='Deutsch'}"
+                Click="btn_german_Click"/>-->
+        <!--<Button x:Name="btn_english"
+                Margin="5"
+                Content="{Binding ChangeToEnglish, FallbackValue='Englisch'}"
+                Click="btn_english_Click"/>-->
+        <RadioButton x:Name="rbt_german"
+                     Margin="5"
+                     Content="{Binding ChangeToGerman, FallbackValue='Deutsch'}"
+                     IsChecked="{Binding LanguageIsGerman}"/>
+        <RadioButton x:Name="rbt_english"
+                     Margin="5"
+                     Content="{Binding ChangeToEnglish, FallbackValue='Englisch'}"
+                     IsChecked="{Binding LanguageIsEnglish}"/>
+    </StackPanel>
+</Window>
